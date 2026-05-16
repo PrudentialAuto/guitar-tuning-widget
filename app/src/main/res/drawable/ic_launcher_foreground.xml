@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Guitar / microphone icon for the app launcher -->
+<!-- Simple microphone launcher icon using only <path> elements -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Microphone body -->
+    <!--
+      Mic body: rounded rectangle 44,28 → 64,68 with r=10 corners
+      Using M/L/A path commands only.
+    -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,28c-5.52,0 -10,4.48 -10,10L44,58c0,5.52 4.48,10 10,10s10,-4.48 10,-10L64,38c0,-5.52 -4.48,-10 -10,-10z" />
-    <!-- Stand arc + pole -->
+        android:pathData="
+          M54,22
+          A12,12,0,0,0,42,34
+          L42,60
+          A12,12,0,0,0,66,60
+          L66,34
+          A12,12,0,0,0,54,22
+          Z" />
+    <!-- Mic stand: arc + pole + base -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M72,54c0,9.94 -8.06,18 -18,18s-18,-8.06 -18,-18L32,54c0,11.28 8.45,20.57 19.36,21.88L51.36,80l5.27,0 0,-4.12C67.55,74.57 76,65.28 76,54L72,54z" />
-    <rect
+        android:pathData="
+          M36,56
+          A18,18,0,0,0,72,56
+          L68,56
+          A14,14,0,0,1,40,56
+          Z" />
+    <!-- Pole -->
+    <path
         android:fillColor="#FFFFFF"
-        android:left="51.5"
-        android:top="80"
-        android:right="56.5"
-        android:bottom="90" />
-    <rect
+        android:pathData="M52,74 L56,74 L56,86 L52,86 Z" />
+    <!-- Base -->
+    <path
         android:fillColor="#FFFFFF"
-        android:left="44"
-        android:top="88"
-        android:right="64"
-        android:bottom="93" />
+        android:pathData="M44,86 L64,86 L64,90 L44,90 Z" />
 </vector>
