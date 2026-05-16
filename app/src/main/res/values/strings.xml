@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Guitar Tuner</string>
+    <string name="widget_description">A resizable guitar tuner widget that listens via the microphone and displays the detected note, frequency, and tuning accuracy.</string>
+    <string name="action_record">Start tuning</string>
+    <string name="action_stop">Stop tuning</string>
+    <string name="cd_sharp_indicator">Sharp — note is above pitch</string>
+    <string name="cd_flat_indicator">Flat — note is below pitch</string>
+    <string name="cd_record_button">Toggle tuner</string>
+</resources>

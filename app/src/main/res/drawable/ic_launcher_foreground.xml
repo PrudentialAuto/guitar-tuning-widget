@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Guitar / microphone icon for the app launcher -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Microphone body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,28c-5.52,0 -10,4.48 -10,10L44,58c0,5.52 4.48,10 10,10s10,-4.48 10,-10L64,38c0,-5.52 -4.48,-10 -10,-10z" />
+    <!-- Stand arc + pole -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M72,54c0,9.94 -8.06,18 -18,18s-18,-8.06 -18,-18L32,54c0,11.28 8.45,20.57 19.36,21.88L51.36,80l5.27,0 0,-4.12C67.55,74.57 76,65.28 76,54L72,54z" />
+    <rect
+        android:fillColor="#FFFFFF"
+        android:left="51.5"
+        android:top="80"
+        android:right="56.5"
+        android:bottom="90" />
+    <rect
+        android:fillColor="#FFFFFF"
+        android:left="44"
+        android:top="88"
+        android:right="64"
+        android:bottom="93" />
+</vector>

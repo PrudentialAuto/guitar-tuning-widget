@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Widget root: dark blue rounded card, horizontal split.
+  Left  — note letter + Hz label + sharp/flat chevrons
+  Right — circular REC button
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/widget_background"
+    android:gravity="center_vertical"
+    android:padding="14dp">
+
+    <!-- ── Left: tuning readout ────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Sharp indicator (green ▲): visible when cents > 5 -->
+        <ImageView
+            android:id="@+id/chevron_up"
+            android:layout_width="22dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_chevron_up"
+            android:visibility="invisible"
+            android:contentDescription="@string/cd_sharp_indicator" />
+
+        <!-- Note letter + Hz on the same row, bottom-aligned -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/note_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="@color/text_note"
+                android:textSize="52sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/note_hz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_hz"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+
+        <!-- Flat indicator (red ▼): visible when cents < -5 -->
+        <ImageView
+            android:id="@+id/chevron_down"
+            android:layout_width="22dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_chevron_down"
+            android:visibility="invisible"
+            android:contentDescription="@string/cd_flat_indicator" />
+
+    </LinearLayout>
+
+    <!-- ── Right: REC button ────────────────────────────────────── -->
+    <ImageButton
+        android:id="@+id/btn_record"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_rec_button"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/cd_record_button"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>
