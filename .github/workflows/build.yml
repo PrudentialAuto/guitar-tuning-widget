@@ -56,7 +56,7 @@ jobs:
           cp "$APK_FILE" release/guitar-tuner-widget-debug.apk
           git config user.email "action@github.com"
           git config user.name "GitHub Actions"
-          git add release/guitar-tuner-widget-debug.apk
+          git add -f release/guitar-tuner-widget-debug.apk
           git diff --staged --quiet && echo "Nothing to commit" && exit 0
           git commit -m "CI: Add built debug APK [skip ci]"
           git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \

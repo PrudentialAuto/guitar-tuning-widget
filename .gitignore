@@ -11,6 +11,7 @@ local.properties
 
 # Android
 *.apk
+!release/*.apk
 *.aab
 *.ap_
 *.dex
